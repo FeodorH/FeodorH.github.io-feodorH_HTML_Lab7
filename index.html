@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="text-white">
+    <div class="container py-5">
+        <!-- Заголовок -->
+        <header class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3">Галерея изображений</h1>
+            <p class="lead opacity-75 mb-0">Горизонтальный слайдер с 8 изображениями. На экране отображается 3 изображения (на мобильных устройствах - 1)</p>
+        </header>
+
+        <!-- Галерея -->
+        <div class="gallery-container rounded-4 shadow-lg p-3 mb-4">
+            <div class="slider-wrapper">
+                <!-- Стрелка влево -->
+                <button class="btn btn-lg position-absolute top-50 start-0 translate-middle-y bg-white bg-opacity-25 border-0 text-white z-3" id="prevBtn">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                
+                <!-- Стрелка вправо -->
+                <button class="btn btn-lg position-absolute top-50 end-0 translate-middle-y bg-white bg-opacity-25 border-0 text-white z-3" id="nextBtn">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
+                <!-- Контейнер слайдов -->
+                <div class="slides-container" id="slidesContainer">
+                    <!-- Слайды 1-3 активны по умолчанию -->
+                    <div class="slide active">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 1">
+                        </div>
+                    </div>
+                    <div class="slide active">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 2">
+                        </div>
+                    </div>
+                    <div class="slide active">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 3">
+                        </div>
+                    </div>
+                    
+                    <!-- Остальные слайды скрыты -->
+                    <div class="slide">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 4">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 5">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 6">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 7">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="image-card card border-0 shadow h-100 overflow-hidden">
+                            <img src="https://static.vecteezy.com/system/resources/previews/007/073/400/non_2x/binary-numbers-on-computer-screen-matrix-background-photo.jpg" class="card-img-top h-100 object-fit-cover" alt="Изображение 8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пейджер -->
+        <div class="pager d-flex justify-content-center align-items-center gap-3">
+            <div class="image-counter fw-bold fs-5">
+                <span id="currentPage">1</span> / <span id="totalPages">3</span>
+            </div>
+            <div class="pager-dots d-flex gap-2" id="pagerDots">
+                <div class="dot rounded-circle bg-white" style="width: 12px; height: 12px;"></div>
+                <div class="dot rounded-circle bg-white bg-opacity-25" style="width: 12px; height: 12px;"></div>
+                <div class="dot rounded-circle bg-white bg-opacity-25" style="width: 12px; height: 12px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
